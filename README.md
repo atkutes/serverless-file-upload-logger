@@ -1,32 +1,24 @@
 # Serverless File Upload Logger
 
-A serverless AWS project that logs uploaded S3 files into DynamoDB using AWS Lambda and Terraform.
+This project is an **event-driven file upload logger** using AWS:
 
-## Architecture
-S3 → Lambda → DynamoDB
-
-## Tech Stack
-- AWS S3
-- AWS Lambda (Python)
-- AWS DynamoDB
-- Terraform
-- CloudWatch Logs
-
-## Flow
-1. File uploaded to S3 bucket
-2. S3 event triggers Lambda
-3. Lambda extracts file metadata
-4. Metadata is stored in DynamoDB
-
-## How to use
-- Upload a file to the S3 input bucket
-- Check DynamoDB for the logged metadata
-- CloudWatch shows Lambda execution logs
-
-## Notes
-- Terraform manages infrastructure
-- `.gitignore` excludes local Lambda zip and Terraform state
+- Upload files to S3
+- Trigger AWS Lambda
+- Log metadata to DynamoDB
+- Lambda logs to CloudWatch
 
 ## Architecture Diagram
 
 ![Flow Diagram](docs/flow-diagram.png)
+
+## How to Test
+
+1. Upload a file to the `file-upload-logger-input` S3 bucket
+2. Check DynamoDB table `file_uploads` for metadata
+3. View logs in CloudWatch
+
+## Tech Stack
+
+- AWS S3, Lambda, DynamoDB
+- Terraform for infrastructure as code
+- Python for Lambda
