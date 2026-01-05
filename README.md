@@ -5,7 +5,7 @@ A serverless AWS project that logs uploaded S3 files into DynamoDB using AWS Lam
 ## Architecture
 S3 → Lambda → DynamoDB
 
-## Tech stack
+## Tech Stack
 - AWS S3
 - AWS Lambda (Python)
 - AWS DynamoDB
@@ -18,5 +18,11 @@ S3 → Lambda → DynamoDB
 3. Lambda extracts file metadata
 4. Metadata is stored in DynamoDB
 
-## Deployment
-Infrastructure is provisioned using Terraform.
+## How to use
+- Upload a file to the S3 input bucket
+- Check DynamoDB for the logged metadata
+- CloudWatch shows Lambda execution logs
+
+## Notes
+- Terraform manages infrastructure
+- `.gitignore` excludes local Lambda zip and Terraform state
