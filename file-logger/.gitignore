@@ -1,8 +1,0 @@
-.terraform/
-*.tfstate
-*.tfstate.backup
-
-lambda.zip
-
-.vscode/
-.DS_Store
