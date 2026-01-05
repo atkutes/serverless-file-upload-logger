@@ -26,3 +26,7 @@ S3 → Lambda → DynamoDB
 ## Notes
 - Terraform manages infrastructure
 - `.gitignore` excludes local Lambda zip and Terraform state
+
+## Architecture Diagram
+
+![Flow Diagram](docs/flow-diagram.png)
